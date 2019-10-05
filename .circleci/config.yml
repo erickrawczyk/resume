@@ -1,0 +1,44 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10
+
+    working_directory: ~/resume
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      # get server up and running in the background
+      - run:
+          command: yarn start
+          background: true
+      # wait for the server to start responding. We expect Bad Request 400 once it starts listening.
+      # https://discuss.circleci.com/t/run-http-server-in-background-during-tests/3177/8
+      - run:
+          shell: /bin/sh
+          command: |
+            wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 10 http://localhost:1234
+            :
+      - run:
+          command: yarn export
+
+      - store_artifacts:
+          path: dist/Resume.pdf
+          destination: Resume.pdf
