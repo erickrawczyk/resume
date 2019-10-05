@@ -47,16 +47,18 @@ export const Job = ({
     <Content>
       <About>
         <div>
-          <b>{company}</b> | <span>{role}</span>
+          <b>{company}</b> {role ? <span> | {role}</span> : null}
         </div>
         <div>
           {location} | {startDate} - {endDate}
         </div>
       </About>
 
-      <Pitch>
-        <i>{pitch}</i>
-      </Pitch>
+      {pitch && (
+        <Pitch>
+          <i>{pitch}</i>
+        </Pitch>
+      )}
 
       <Summary>{children}</Summary>
     </Content>

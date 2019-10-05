@@ -5,6 +5,7 @@ import Page from './components/Page';
 import Header from './components/Header';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
+import Education from './components/Education';
 
 const Divider = styled.hr`
   border: none;
@@ -17,6 +18,7 @@ const App = () => (
     <Divider />
     <Skills />
     <Experience />
+    <Education />
   </Page>
 );
 

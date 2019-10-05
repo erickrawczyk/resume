@@ -4,6 +4,11 @@ import styled from 'styled-components';
 import Section from './Section';
 import { Job, JobDetail } from './Job';
 
+const Link = styled.a`
+  color: black;
+  text-decoration: none;
+`;
+
 const Experience = () => (
   <Section title="Experience">
     <Job
@@ -61,6 +66,29 @@ const Experience = () => (
         Responsible for project management, technical roadmaps, issue
         prioritization, sprint planning, and implementing team-wide scrum
         methodologies
+      </JobDetail>
+    </Job>
+
+    <Job
+      company="Argo Friend Date"
+      role="Lead Engineer, Web"
+      location="Ann Arbor, MI"
+      startDate="Jan. 2015"
+      endDate="Sep. 2018"
+      pitch="Sign up for a blind friend date and meet someone new"
+    >
+      <JobDetail>
+        Collaborated with cofounders and a student team to expand a hackathon
+        project into a full product
+      </JobDetail>
+      <JobDetail>
+        Rebuilt the original AngularJS application as a React application with a
+        Firebase backend, and an SMS chatbot.
+      </JobDetail>
+      <JobDetail>
+        <Link href="https://argofrienddate.com/">
+          https://argofrienddate.com/
+        </Link>
       </JobDetail>
     </Job>
   </Section>

@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.section`
-  padding: 1rem 0 0 0;
+  margin-top: 0.5rem;
 `;
 
 const Title = styled.h2`
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 2px;
