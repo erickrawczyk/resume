@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Page from './components/Page';
 import Header from './components/Header';
 import Skills from './components/Skills';
+import Experience from './components/Experience';
 
 const Divider = styled.hr`
   border: none;
@@ -15,6 +16,7 @@ const App = () => (
     <Header />
     <Divider />
     <Skills />
+    <Experience />
   </Page>
 );
 

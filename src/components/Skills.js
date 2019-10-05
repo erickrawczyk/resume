@@ -23,7 +23,8 @@ const Skills = () => (
         MySQL, DynamoDB
       </ListItem>
       <ListItem>
-        <ItemTitle>DevOps</ItemTitle>AWS, Docker, Heroku, CircleCI, GitLabCI
+        <ItemTitle>DevOps</ItemTitle>AWS, Docker, Terraform, Heroku, CircleCI,
+        GitLabCI
       </ListItem>
       <ListItem>
         <ItemTitle>Tooling</ItemTitle>Yarn/npm, Git, Jest, Puppeteer, Enzyme

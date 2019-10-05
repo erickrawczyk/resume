@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MARGIN = 0.75;
+import { CIRCLE_SIZE } from '../lib/constants';
 
 export const List = styled.ul`
   padding-inline-start: 0;
@@ -8,7 +8,7 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  margin: ${MARGIN}rem 0;
+  margin: ${CIRCLE_SIZE}rem 0;
 
   &:before {
     content: '';
@@ -16,8 +16,8 @@ export const ListItem = styled.li`
     border: 1px solid #000;
     border-radius: 50%;
     display: inline-block;
-    height: ${MARGIN}rem;
-    width: ${MARGIN}rem;
+    height: ${CIRCLE_SIZE}rem;
+    width: ${CIRCLE_SIZE}rem;
     text-align: center;
     line-height: 1rem;
     background: #fff;
@@ -30,7 +30,7 @@ export const ListItem = styled.li`
     display: block;
     width: 0px;
     height: 1rem;
-    margin: -4px 0 calc(-${MARGIN}rem - 0.1rem) 6px;
+    margin: -5px 0 calc(-${CIRCLE_SIZE}rem - 0.1rem) 6px;
   }
 
   &:last-of-type:after {
