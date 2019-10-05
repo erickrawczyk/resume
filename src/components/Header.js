@@ -9,7 +9,7 @@ const Container = styled.header`
 `;
 
 const Name = styled.h1`
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0;
   font-size: 3.5rem;
