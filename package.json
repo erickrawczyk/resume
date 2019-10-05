@@ -10,8 +10,10 @@
     "start": "parcel src/index.html"
   },
   "dependencies": {
+    "components": "^0.1.0",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "styled-components": "^4.4.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
