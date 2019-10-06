@@ -52,3 +52,30 @@ jobs:
       - store_artifacts:
           path: dist/Resume.pdf
           destination: Resume.pdf
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - Resume.pdf
+  release:
+    requires:
+      - build
+    docker:
+      - image: circleci/golang:1.13
+    working_directory: ~/resume
+    steps:
+      - attach_workspace:
+          at: dist
+      - run:
+          name: 'Publish Release on GitHub'
+          command: |
+            go get github.com/tcnksm/ghr
+            VERSION=latest
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ./dist/Resume.pdf
+workflows:
+  version: 2
+  build_and_release:
+    jobs:
+      - build
+      - release:
+          requires:
+            - build
