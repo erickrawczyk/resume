@@ -4,7 +4,7 @@
 
 This repo generates my personal Resume. It renders the document using React and Styled Components, and the CircleCI pipeline uses Headless Chrome controlled with Puppeteer to export the document to PDF.
 
-My resume can be downloaded from the [Releases](https://github.com/erickrawczyk/resume/releases) tab.
+[📥Download Resume](https://github.com/erickrawczyk/resume/releases/download/latest/Resume.pdf)
 
 # Local Development
 
