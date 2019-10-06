@@ -31,6 +31,7 @@ export const JobDetail = styled.li`
 const Summary = styled.ul`
   padding-inline-start: 20px;
   margin: 0.5rem 0;
+  font-weight: 300;
 `;
 
 export const Job = ({
