@@ -52,11 +52,17 @@ jobs:
       - store_artifacts:
           path: dist/Resume.pdf
           destination: Resume.pdf
+
+      - store_artifacts:
+          path: dist/Resume.jpg
+          destination: Resume.jpg
+
       - persist_to_workspace:
           root: dist
           paths:
             - Resume.pdf
-  release:
+            - Resume.jpg
+  release_pdf:
     requires:
       - build
     docker:
@@ -70,12 +76,29 @@ jobs:
           command: |
             go get github.com/tcnksm/ghr
             VERSION=latest
-            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ./dist/Resume.pdf
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ./dist
+  release_jpg:
+    requires:
+      - build
+    docker:
+      - image: circleci/python:3.6.2
+    working_directory: ~/resume
+    steps:
+      - attach_workspace:
+          at: dist
+      - run: sudo pip install awscli
+      - run:
+          name: 'Upload Resume to S3'
+          command: aws s3 cp ./dist s3://eric.kraw.cz/img --recursive
+
 workflows:
   version: 2
   build_and_release:
     jobs:
       - build
-      - release:
+      - release_pdf:
+          requires:
+            - build
+      - release_jpg:
           requires:
             - build
