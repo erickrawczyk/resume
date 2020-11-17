@@ -81,11 +81,12 @@ jobs:
     requires:
       - build
     docker:
-      - image: amazon/aws-cli
+      - image: circleci/python:3.6.2
     working_directory: ~/resume
     steps:
       - attach_workspace:
           at: dist
+      - run: sudo pip install awscli
       - run:
           name: 'Upload Resume to S3'
           command: aws s3 cp ./dist s3://eric.kraw.cz/img --recursive
