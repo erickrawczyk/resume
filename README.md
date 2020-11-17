@@ -6,7 +6,7 @@ This repo generates my personal Resume. It renders the document using React and 
 
 [📥Download Resume](https://github.com/erickrawczyk/resume/releases/download/latest/Resume.pdf)
 
-![Image of Resume](https://github.com/erickrawczyk/resume/releases/download/latest/Resume.jpg)
+![Image of Resume](https://eric.kraw.cz/img/Resume.jpg)
 
 # Local Development
 

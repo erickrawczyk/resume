@@ -62,7 +62,7 @@ jobs:
           paths:
             - Resume.pdf
             - Resume.jpg
-  release:
+  release_pdf:
     requires:
       - build
     docker:
@@ -77,11 +77,27 @@ jobs:
             go get github.com/tcnksm/ghr
             VERSION=latest
             ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ./dist
+  release_jpg:
+    requires:
+      - build
+    docker:
+      - image: amazon/aws-cli
+    working_directory: ~/resume
+    steps:
+      - attach_workspace:
+          at: dist
+      - run:
+          name: 'Upload Resume to S3'
+          command: aws s3 cp ./dist s3://eric.kraw.cz/img --recursive
+
 workflows:
   version: 2
   build_and_release:
     jobs:
       - build
-      - release:
+      - release_pdf:
+          requires:
+            - build
+      - release_jpg:
           requires:
             - build
