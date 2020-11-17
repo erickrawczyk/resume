@@ -4,31 +4,27 @@ import styled from 'styled-components';
 import Section from './Section';
 import { Job, JobDetail } from './Job';
 
-const Link = styled.a`
-  color: black;
-  text-decoration: none;
-`;
-
 const Experience = () => (
   <Section title="Experience">
     <Job
       company="SkySpecs"
-      role="Applications + DevOps Engineer"
+      role="Senior Software Engineer"
       location="Ann Arbor, MI"
       startDate="Jan. 2019"
       pitch="Data & Robotics startup that helps wind farm owners manage turbine fleets"
     >
       <JobDetail>
         Software Engineer responsible for the development and deployment of the
-        Horizon web application
-      </JobDetail>
-      <JobDetail>
-        Built a PDF rendering engine using react and puppeteer that increased
-        maximum report size by 10 times
+        Horizon suite of web applications.
       </JobDetail>
       <JobDetail>
         Developed a CI/CD pipeline to automate the review and deployment of
-        stateless infrastructure using GitLabCI and Terraform
+        stateless infrastructure using GitLabCI and Hashicorp Terraform.
+      </JobDetail>
+      <JobDetail>
+        Responsible for building several microservices with one other engineer,
+        including an authorization service, a user management application, and a
+        PDF rendering engine that increased maximum report size by 10x.
       </JobDetail>
     </Job>
 
@@ -42,11 +38,12 @@ const Experience = () => (
     >
       <JobDetail>
         Full stack engineer with a frontend focus building API’s, UI’s and data
-        visualizations for understanding large-scale network data
+        visualizations for understanding large-scale network data.
       </JobDetail>
       <JobDetail>
-        Led the integration of React and Material UI into a custom view
-        framework
+        Worked with UX to develop a new design language and led the integration
+        of React and Material UI into a legacy view framework, allowing
+        customers to configure custom dashboards for realtime analytics.
       </JobDetail>
     </Job>
 
@@ -60,12 +57,11 @@ const Experience = () => (
     >
       <JobDetail>
         Early employee that eventually led a team of 6 engineers to develop and
-        scale the company’s EHR application
+        scale the company’s EHR application to support millions of profiles.
       </JobDetail>
       <JobDetail>
-        Responsible for project management, technical roadmaps, issue
-        prioritization, sprint planning, and implementing team-wide scrum
-        methodologies
+        Responsible for creating technical roadmaps and how to execute them,
+        building integrations with several third party vendors.
       </JobDetail>
     </Job>
 
@@ -79,16 +75,11 @@ const Experience = () => (
     >
       <JobDetail>
         Collaborated with cofounders and a student team to expand a hackathon
-        project into a full product
+        project into a full product.
       </JobDetail>
       <JobDetail>
-        Rebuilt the original AngularJS application as a React application with a
-        Firebase backend, and an SMS chatbot.
-      </JobDetail>
-      <JobDetail>
-        <Link href="https://argofrienddate.com/">
-          https://argofrienddate.com/
-        </Link>
+        Rebuilt the original AngularJS application in React with a Firebase
+        backend and an SMS chatbot.
       </JobDetail>
     </Job>
   </Section>

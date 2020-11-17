@@ -15,16 +15,16 @@ const Skills = () => (
   <Section title="Skills">
     <List>
       <ListItem>
-        <ItemTitle>Frontend</ItemTitle>React, Redux, Styled Components,
-        AngularJS, JavaScript
+        <ItemTitle>Frontend</ItemTitle>React, Redux, Hooks, Styled Components,
+        JavaScript
       </ListItem>
       <ListItem>
-        <ItemTitle>Backend</ItemTitle>Node, Python, GraphQL, REST, PostgreSQL,
-        MySQL, DynamoDB
+        <ItemTitle>Backend</ItemTitle>Node, GraphQL, REST, PostgreSQL, MySQL,
+        DynamoDB
       </ListItem>
       <ListItem>
-        <ItemTitle>DevOps</ItemTitle>AWS, Docker, Terraform, Heroku, CircleCI,
-        GitLabCI
+        <ItemTitle>DevOps</ItemTitle>AWS, Serverless, Docker, Terraform, Heroku,
+        CircleCI, GitLabCI
       </ListItem>
       <ListItem>
         <ItemTitle>Tooling</ItemTitle>Yarn/npm, Git, Jest, Puppeteer, Enzyme
