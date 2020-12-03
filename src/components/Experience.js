@@ -74,12 +74,12 @@ const Experience = () => (
       pitch="Sign up for a blind friend date and meet someone new"
     >
       <JobDetail>
-        Collaborated with cofounders and a student team to expand a hackathon
-        project into a full product.
+        A passion project to expand a hackathon project into a full product in
+        collaboration with a student team.
       </JobDetail>
       <JobDetail>
-        Rebuilt the original AngularJS application in React with a Firebase
-        backend and an SMS chatbot.
+        Rebuilt an AngularJS application in React with a Firebase backend and an
+        SMS chatbot.
       </JobDetail>
     </Job>
   </Section>
