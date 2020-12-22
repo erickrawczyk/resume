@@ -4,13 +4,31 @@ import styled from 'styled-components';
 import Section from './Section';
 import { Job, JobDetail } from './Job';
 
+const jobs = [
+  {
+    company: 'SkySpecs',
+    pitch:
+      'Data & Robotics startup that helps wind farm owners manage turbine fleets',
+    roles: [
+      { name: 'Software Engineer', start: 'Jan. 2019', end: 'Jun. 2020' },
+      { name: 'Senior Software Engineer', start: 'Jun. 2020', end: 'Present' },
+    ],
+  },
+];
+
 const Experience = () => (
   <Section title="Experience">
     <Job
       company="SkySpecs"
-      role="Senior Software Engineer"
-      location="Ann Arbor, MI"
-      startDate="Jan. 2019"
+      location="Ann Arbor, MI (Remote)"
+      roles={[
+        {
+          name: 'Senior Software Engineer',
+          start: 'Jun. 2020',
+          end: 'Present',
+        },
+        { name: 'Software Engineer', start: 'Jan. 2019', end: 'Jun. 2020' },
+      ]}
       pitch="Data & Robotics startup that helps wind farm owners manage turbine fleets"
     >
       <JobDetail>
@@ -30,10 +48,14 @@ const Experience = () => (
 
     <Job
       company="Deepfield"
-      role="Frontend Engineer"
       location="Ann Arbor, MI"
-      startDate="Nov. 2017"
-      endDate="Dec. 2018"
+      roles={[
+        {
+          name: 'Frontend Engineer',
+          start: 'Nov. 2020',
+          end: 'Dec. 2018',
+        },
+      ]}
       pitch="Realtime big data analytics and security products for peta-scale networks"
     >
       <JobDetail>
@@ -49,11 +71,16 @@ const Experience = () => (
 
     <Job
       company="DocNetwork"
-      role="Head of Engineering"
       location="Ann Arbor, MI"
-      startDate="Dec. 2014"
-      endDate="Nov. 2017"
       pitch="Health software suite to manage patient records at schools and camps"
+      roles={[
+        {
+          name: 'Head of Engineering',
+          start: 'Nov. 2016',
+          end: 'Nov. 2017',
+        },
+        { name: 'Software Developer', start: 'Dec. 2014', end: 'Nov. 2016' },
+      ]}
     >
       <JobDetail>
         Early employee that eventually led a team of 6 engineers to develop and
@@ -62,24 +89,6 @@ const Experience = () => (
       <JobDetail>
         Responsible for creating technical roadmaps and how to execute them,
         building integrations with several third party vendors.
-      </JobDetail>
-    </Job>
-
-    <Job
-      company="Argo Friend Date"
-      role="Lead Engineer, Web"
-      location="Ann Arbor, MI"
-      startDate="Jan. 2015"
-      endDate="Sep. 2018"
-      pitch="Sign up for a blind friend date and meet someone new"
-    >
-      <JobDetail>
-        A passion project to expand a hackathon project into a full product in
-        collaboration with a student team.
-      </JobDetail>
-      <JobDetail>
-        Rebuilt an AngularJS application in React with a Firebase backend and an
-        SMS chatbot.
       </JobDetail>
     </Job>
   </Section>

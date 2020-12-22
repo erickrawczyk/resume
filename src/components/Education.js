@@ -14,11 +14,14 @@ const Education = () => (
     <Job
       company="University Of Michigan"
       location="Ann Arbor, MI"
-      startDate="Sep. 2011"
-      endDate="May. 2015"
-    >
-      <JobDetail>Pursued Computer Science</JobDetail>
-    </Job>
+      roles={[
+        {
+          name: 'Pursued Computer Science',
+          start: 'Sep. 2011',
+          end: 'May 2015',
+        },
+      ]}
+    />
   </Section>
 );
 

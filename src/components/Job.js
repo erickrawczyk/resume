@@ -12,10 +12,21 @@ const Content = styled.div`
   width: 100%;
 `;
 
+const Name = styled.b`
+  font-size: 1.25rem;
+`;
+
 const About = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+`;
+
+const Role = styled.div`
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
 `;
 
 const Pitch = styled.div`
@@ -34,26 +45,26 @@ const Summary = styled.ul`
   font-weight: 300;
 `;
 
-export const Job = ({
-  company,
-  role,
-  location,
-  startDate,
-  endDate = 'Present',
-  pitch,
-  children,
-}) => (
+export const Job = ({ company, location, roles = [], pitch, children }) => (
   <Container>
     <CircleLine />
     <Content>
       <About>
         <div>
-          <b>{company}</b> {role ? <span> | {role}</span> : null}
+          <Name>{company}</Name>
         </div>
-        <div>
-          {location} | {startDate} - {endDate}
-        </div>
+        <div>{location}</div>
       </About>
+
+      {roles.length &&
+        roles.map(({ name, start, end = 'Present' }) => (
+          <Role key={name}>
+            <div>{name ? name : null}</div>
+            <div>
+              {start} - {end}
+            </div>
+          </Role>
+        ))}
 
       {pitch && (
         <Pitch>
