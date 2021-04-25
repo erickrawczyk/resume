@@ -8,7 +8,7 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  margin: ${CIRCLE_SIZE}rem 0;
+  margin: 0.25rem 0;
 
   &:before {
     content: '';

@@ -19,15 +19,15 @@ const Skills = () => (
         JavaScript
       </ListItem>
       <ListItem>
-        <ItemTitle>Backend</ItemTitle>Node, GraphQL, REST, PostgreSQL, MySQL,
-        DynamoDB
+        <ItemTitle>Backend</ItemTitle>Node, Python, GraphQL, REST, PostgreSQL,
+        MySQL, DynamoDB
       </ListItem>
       <ListItem>
         <ItemTitle>DevOps</ItemTitle>AWS, Serverless, Docker, Terraform, Heroku,
         CircleCI, GitLabCI
       </ListItem>
       <ListItem>
-        <ItemTitle>Tooling</ItemTitle>Yarn/npm, Git, Jest, Puppeteer, Enzyme
+        <ItemTitle>Tooling</ItemTitle>Yarn/npm, Git, Jest, Puppeteer, Cypress
       </ListItem>
     </List>
   </Section>
