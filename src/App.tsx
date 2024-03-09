@@ -1,4 +1,5 @@
 import './App.css';
+import 'unfonts.css';
 import Header from '@components/Header';
 import ExperienceSection from '@/components/ExperienceSection';
 import ExperienceItem from '@/components/ExperienceItem';

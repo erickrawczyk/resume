@@ -1,8 +1,9 @@
+import path from 'path';
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import Unfonts from 'unplugin-fonts/vite'
-import path from 'path';
+import { viteSingleFile } from "vite-plugin-singlefile"
 
 
 // https://vitejs.dev/config/
@@ -18,14 +19,15 @@ export default defineConfig({
     react(),
     tsconfigPaths(),
     Unfonts({
-      google: {
+      custom: {
         families: [
           {
             name: 'Montserrat',
-            styles: 'ital,wght@0,100..900;1,100..900',
+            src: './src/assets/fonts/*.ttf',
           },
         ],
       },
     }),
+    viteSingleFile(),
   ],
 })
