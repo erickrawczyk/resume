@@ -2,34 +2,11 @@ export const personalInfo: PersonalInfo = {
   name: "Eric Krawczyk",
   title: "Technologist & Leader",
   location: "Detroit, MI",
-  email: { label: "etk@duck.com", url: "mailto:etk@duck.com" },
+  email: { label: "eric.krawczyk@gmail.com", url: "mailto:eric.krawczyk@gmail.com" },
   linkedIn: { label: "eric-krawczyk", url: "https://www.linkedin.com/in/eric-krawczyk" },
   github: { label: "erickrawczyk", url: "https://www.github.com/erickrawczyk/resume" },
   website: { label: "eric.kraw.cz", url: "https://eric.kraw.cz" },
 }
-
-export const skillCategories: SkillCategory[] = [
-  {
-    label: "Frontend",
-    skills: ["JavaScript/TypeScript", "HTML", "CSS", "Tailwind CSS", "Material UI"]
-  },
-  {
-    label: "Backend",
-    skills: ["Node.js", "Express", "Python", "Django", "PostgreSQL", "REST", "GraphQL"]
-  },
-  {
-    label: "DevOps",
-    skills: ["AWS", "Heroku", "Docker", "CircleCI", "GitLab", "GitHub Actions"]
-  },
-  {
-    label: "Testing",
-    skills: ["Jest", "React Testing Library", "Cypress", "Puppeteer", "Postman"]
-  },
-  {
-    label: "Tools",
-    skills: ["VS Code", "Git", "Postman", "Figma", "Photoshop"]
-  }
-]
 
 export const professionalExperiences: Experience[] = [
   {
@@ -56,8 +33,9 @@ export const professionalExperiences: Experience[] = [
       }
     ],
     description: [
-      "Facilitated the transition to a new SPA frontend, including a complete rewrite of the frontend codebase.",
-      "Led the development of a Time and Billing Management Product after acquiring a competitor.",
+      "Empowered team members through mentorship, fostered a culture of collaboration, managed project lifecycles, and enhanced internal support and deployment processes.",
+      "Directed the development and launch of a new data intelligence product from a competitor's acquisition, leading cross-functional teams to integrate the acquisition smoothly into our product line.",
+      "Rebuilt the Django frontend in React, significantly improving UX and maintainability while improving relevance and speed of pro bono opportunity results, resulting in 10x faster search and a 20% increase in lawyer interest in pro bono opportunities.",
     ]
   },
   {
@@ -65,7 +43,7 @@ export const professionalExperiences: Experience[] = [
       name: "SkySpecs",
       website: "https://www.skyspecs.com",
       location: "Ann Arbor, MI (Remote)",
-      summary: "Data & Robotics startup that helps wind farm owners monitor the health of their turbine fleets",
+      summary: "Data & Robotics startup that helps wind farm owners monitor the health of their turbine fleets.",
     },
     positions: [
       {
@@ -80,8 +58,7 @@ export const professionalExperiences: Experience[] = [
       },
     ],
     description: [
-      "Responsible for building features and several microservices with one other engineer, including an authorization service, a user management application, and a PDF rendering engine that increased maximum report size by 10x.",
-      "Developed a CI/CD pipeline to automate the review and deployment of stateless infrastructure using GitLabCI and Hashicorp Terraform.",
+      "Microservice and applications developer building authorization, user management, fleet management, and reporting services, as well as automating the CI/CD pipeline for deploying stateless infrastructure using GitLabCI and Hashicorp Terraform.",
     ]
   },
   {
@@ -99,7 +76,7 @@ export const professionalExperiences: Experience[] = [
       }
     ],
     description: [
-      "Worked with UX to develop a new design language and led the integration of React and Material UI into a legacy view framework, allowing customers to configure custom dashboards for realtime analytics.",
+      "Integrated React and Material UI into a legacy view framework, allowing customers to configure realtime analytics dashboards.",
     ]
   },
   {
@@ -107,7 +84,7 @@ export const professionalExperiences: Experience[] = [
       name: "DocNetwork",
       website: "https://www.docnetwork.org",
       location: "Ann Arbor, MI",
-      summary: "Health software suite to manage patient records at schools and camps",
+      summary: "Health software suite to manage patient records at schools and camps.",
     },
     positions: [
       {
@@ -122,7 +99,7 @@ export const professionalExperiences: Experience[] = [
       },
     ],
     description: [
-      "Early employee that led a team of 6 engineers to develop and scale the company's EHR to support hundreds of schools and camps.",
+      "Early employee leading a team of 6 engineers to scale the company's EHR to support hundreds of schools and camps.",
     ]
   },
 ]
@@ -131,14 +108,19 @@ export const extracurricularExperiences: Experience[] = [
   {
     organization: {
       name: "313 Care Collective",
-      website: "https://www.313cc.org",
+      website: "https://313cc.org",
       location: "Detroit, MI",
-      summary: "Community health organization providing first aid, training, supplies, and logistical support",
+      summary: "Community health organization providing first aid, training, supplies, and logistical support for local political action.",
     },
     positions: [
       {
         title: "First Responder & Instructor",
         startDate: "2020-08",
+      },
+      {
+        title: "Dispute Resolution & De-escalation",
+        startDate: "2020-08",
+        endDate: "2021-10",
       },
     ],
   },
@@ -146,13 +128,13 @@ export const extracurricularExperiences: Experience[] = [
     organization: {
       name: "Syncytium Arts",
       website: "https://syncytium.org/",
-      location: "Ann Arbor/Detroit/Chicago",
-      summary: "Artist incubator and collective that builds immersive installations for ephemeral events",
+      location: "Ann Arbor/Detroit, MI",
+      summary: "Artist incubator and collective that empowers creators and builds immersive installations for ephemeral events.",
     },
     positions: [
       {
         title: "Director of Hospitality",
-        startDate: "2020-08",
+        startDate: "2022-10",
       },
       {
         title: "Artist & Fabricator",
@@ -162,13 +144,17 @@ export const extracurricularExperiences: Experience[] = [
   },
 ]
 
-export const education: Education = {
-  school: {
+export const education: Experience = {
+  organization: {
     name: "University of Michigan",
     location: "Ann Arbor, MI",
     website: "https://www.umich.edu",
   },
-  major: "Computer Science (Pursued)",
-  startDate: "2011-09",
-  endDate: "2015-05",
+  positions: [
+    {
+      title: "Computer Science, Pursued",
+      startDate: "2011-09",
+      endDate: "2015-05",
+    }
+  ],
 }

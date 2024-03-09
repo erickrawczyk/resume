@@ -13,11 +13,6 @@ type PersonalInfo = {
   website: SocialMedia;
 }
 
-type SkillCategory = {
-  label: string;
-  skills: string[];
-}
-
 type Position = {
   title: string;
   startDate: string;
@@ -28,7 +23,7 @@ type Organization = {
   name: string;
   location: string;
   website: string;
-  summary: string;
+  summary?: string;
 }
 
 type Experience = {

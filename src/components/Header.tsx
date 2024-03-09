@@ -36,14 +36,14 @@ export default function Header() {
   const { name, location, title, email, linkedIn, github, website } =
     personalInfo;
   return (
-    <div className="flex justify-between mb-4">
-      <div className="flex flex-col justify-between">
-        <h1 className="uppercase text-7xl">{name}</h1>
-        <h2 className="text-3xl">
+    <div className="flex flex-col justify-between">
+      <div className="flex mx-16 mb-2 align-middle justify-around">
+        <h1 className="uppercase text-4xl">{name}</h1>
+        <div className="text-lg my-auto">
           {title} &bull; {location}
-        </h2>
+        </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex justify-around">
         <SocialMediaLink className="mb-2" {...website} Icon={GlobeAltIcon} />
         <SocialMediaLink className="mb-2" {...email} Icon={EnvelopeIcon} />
         <SocialMediaLink className="mb-2" {...linkedIn} Icon={LinkedInIcon} />

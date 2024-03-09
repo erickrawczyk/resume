@@ -1,14 +1,16 @@
 import { Positions } from '@components/Positions';
+import clsx from 'clsx';
 
 interface ExperienceItemProps {
   experience: Experience;
 }
 
 export default function ExperienceItem({ experience }: ExperienceItemProps) {
+  const isSingle = experience.description?.length === 1;
   return (
     <>
       <div className="flex justify-between align-middle mb-1">
-        <h3 className="text-xl font-medium">
+        <h3 className="text-lg font-medium">
           <a href={experience.organization.website} target="_blank">
             {experience.organization.name}
           </a>
@@ -18,10 +20,12 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
       {experience.positions ? (
         <Positions positions={experience.positions} />
       ) : null}
-      <p className="italic text-sm mb-1">{experience.organization.summary}</p>
-      <ul className="text-sm list-disc pl-4">
+      <p className="italic text-xs mb-1">{experience.organization.summary}</p>
+      <ul className={clsx('text-xs', !isSingle && 'list-disc pl-4')}>
         {experience.description?.map((description, index) => (
-          <li key={index}>{description}</li>
+          <li key={description} className="mb-1">
+            {description}
+          </li>
         ))}
       </ul>
     </>

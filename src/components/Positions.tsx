@@ -24,9 +24,9 @@ export function Positions({ positions }: PositionsProps) {
       {sorted.map((position, index) => (
         <li key={index}>
           <div className="flex justify-between align-middle">
-            <p className="text-sm">{position.title}</p>
+            <p className="text-xs">{position.title}</p>
             <hr className="grow mx-4 my-auto" />
-            <p className="text-sm">
+            <p className="text-xs">
               {formatDate(position.startDate)} -&nbsp;
               {formatDate(position.endDate) || 'Present'}
             </p>
