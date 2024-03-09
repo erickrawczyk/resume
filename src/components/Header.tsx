@@ -39,7 +39,7 @@ export default function Header() {
     <div className="flex flex-col justify-between">
       <div className="flex mb-2 align-middle justify-around">
         <h1 className="uppercase text-4xl">{name}</h1>
-        <div className="text-lg my-auto">
+        <div className="text-xl my-auto">
           {title} &bull; {location}
         </div>
       </div>
