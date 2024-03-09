@@ -19,8 +19,8 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: Install Puppeteer
-          command: npm install puppeteer
+          name: Run NPM Postinstall Manually for Puppeteer Cache
+          command: npm run postinstall
       - run:
           name: Build & Export
           command: npm run export
