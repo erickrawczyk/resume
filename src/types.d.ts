@@ -1,5 +1,5 @@
 type SocialMedia = {
-  label: string;
+  label?: string;
   url: string;
 }
 
@@ -33,8 +33,8 @@ type Organization = {
 
 type Experience = {
   organization: Organization;
-  positions: Position[];
-  description: string[];
+  positions?: Position[];
+  description?: string[];
 }
 
 type School = Pick<Organization, "name" | "location", "website">;

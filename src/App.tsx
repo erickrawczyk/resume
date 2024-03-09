@@ -1,12 +1,20 @@
 import './App.css';
 import Header from '@components/Header';
-import Experience from '@components/Experience';
+import ExperienceSection from '@/components/ExperienceSection';
+
+import {
+  professionalExperiences,
+  extracurricularExperiences,
+} from '@constants';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Experience />
+      <hr className="mb-4 border-black" />
+      <ExperienceSection experiences={professionalExperiences} />
+      <hr className="mb-4 border-black" />
+      <ExperienceSection experiences={extracurricularExperiences} />
     </div>
   );
 }
