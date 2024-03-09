@@ -43,6 +43,7 @@ jobs:
           name: "Publish Release on GitHub"
           command: |
             go install github.com/tcnksm/ghr@latest
+            VERSION=latest
             ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ./dist
   release-jpg:
     working_directory: ~/resume
