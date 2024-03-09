@@ -63,6 +63,12 @@ workflows:
       - release-pdf:
           requires:
             - build-and-export
+          filters:
+            branches:
+              only: main
       - release-jpg:
           requires:
             - build-and-export
+          filters:
+            branches:
+              only: main
