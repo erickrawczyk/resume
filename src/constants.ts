@@ -1,6 +1,6 @@
 export const personalInfo: PersonalInfo = {
   name: "Eric Krawczyk",
-  title: "Technologist & Leader",
+  title: "Software Product Engineer",
   location: "Detroit, MI",
   email: { label: "eric.krawczyk@gmail.com", url: "mailto:eric.krawczyk@gmail.com" },
   linkedIn: { label: "eric-krawczyk", url: "https://www.linkedin.com/in/eric-krawczyk" },

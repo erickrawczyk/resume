@@ -37,7 +37,7 @@ export default function Header() {
     personalInfo;
   return (
     <div className="flex flex-col justify-between">
-      <div className="flex mx-16 mb-2 align-middle justify-around">
+      <div className="flex mb-2 align-middle justify-around">
         <h1 className="uppercase text-4xl">{name}</h1>
         <div className="text-lg my-auto">
           {title} &bull; {location}
