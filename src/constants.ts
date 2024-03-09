@@ -33,9 +33,9 @@ export const professionalExperiences: Experience[] = [
       }
     ],
     description: [
-      "Empowered team members through mentorship, fostered a culture of collaboration, managed project lifecycles, and enhanced internal support and deployment processes.",
+      "Empower team members through mentorship, foster a culture of collaboration, manage project lifecycles, and enhance internal support and deployment processes.",
       "Directed the development and launch of a new data intelligence product from a competitor's acquisition, leading cross-functional teams to integrate the acquisition smoothly into our product line.",
-      "Rebuilt the Django frontend in React, significantly improving UX and maintainability while improving relevance and speed of pro bono opportunity results, resulting in 10x faster search and a 20% increase in lawyer interest in pro bono opportunities.",
+      "Rebuilt the Django python frontend in React, significantly improving UX and maintainability while improving relevance and speed of pro bono opportunity results, resulting in 10x faster search and a 20% increase in lawyer interest in pro bono opportunities.",
     ]
   },
   {
@@ -118,7 +118,7 @@ export const extracurricularExperiences: Experience[] = [
         startDate: "2020-08",
       },
       {
-        title: "Dispute Resolution & De-escalation",
+        title: "Dispute Resolution & De-escalation Mediator",
         startDate: "2020-08",
         endDate: "2021-10",
       },
