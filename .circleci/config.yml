@@ -19,6 +19,9 @@ jobs:
           paths:
             - ./node_modules
       - run:
+          name: Install Puppeteer
+          command: npm install puppeteer
+      - run:
           name: Build & Export
           command: npm run export
       - store_artifacts:
