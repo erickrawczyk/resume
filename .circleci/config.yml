@@ -18,9 +18,7 @@ jobs:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
-      - run:
-          name: Run NPM Postinstall Manually for Puppeteer Cache
-          command: npm run postinstall
+            - ./.cache
       - run:
           name: Build & Export
           command: npm run export
