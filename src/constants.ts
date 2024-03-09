@@ -58,7 +58,7 @@ export const professionalExperiences: Experience[] = [
       },
     ],
     description: [
-      "Microservice and applications developer building authorization, user management, fleet management, and reporting services, as well as automating the CI/CD pipeline for deploying stateless infrastructure using GitLabCI and Hashicorp Terraform.",
+      "Microservices and applications developer building turbine fleet management, authorization, user management, and reporting services, as well as automating the CI/CD pipeline for deploying stateless infrastructure using GitLabCI and Hashicorp Terraform.",
     ]
   },
   {
@@ -76,7 +76,7 @@ export const professionalExperiences: Experience[] = [
       }
     ],
     description: [
-      "Integrated React and Material UI into a legacy view framework, allowing customers to configure realtime analytics dashboards.",
+      "Led the integration of React and Material UI into a legacy view framework, allowing customers to configure realtime analytics dashboards.",
     ]
   },
   {

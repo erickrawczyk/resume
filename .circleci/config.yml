@@ -18,7 +18,7 @@ jobs:
           key: dependency-cache-{{ checksum "package-lock.json" }}-v2
           paths:
             - ./node_modules
-            - ./.cache
+            - ~/.cache
       - run:
           name: Build & Export
           command: npm run export
