@@ -8,7 +8,7 @@ This repo generates my personal Resume. It builds the React and Tailwind app wit
 
 # Local Development
 
-[![CircleCI](https://circleci.com/gh/erickrawczyk/resume/tree/master.svg?style=svg)](https://circleci.com/gh/erickrawczyk/resume/tree/main)
+[![CircleCI](https://circleci.com/gh/erickrawczyk/resume/tree/main.svg?style=svg)](https://circleci.com/gh/erickrawczyk/resume/tree/main)
 
 **Global Dependencies**
 
