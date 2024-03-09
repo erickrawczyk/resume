@@ -8,7 +8,7 @@ This repo generates my personal Resume. It builds the React and Tailwind app wit
 
 # Local Development
 
-[![CircleCI](https://circleci.com/gh/erickrawczyk/resume/tree/master.svg?style=svg)](https://circleci.com/gh/erickrawczyk/resume/tree/master)
+[![CircleCI](https://circleci.com/gh/erickrawczyk/resume/tree/master.svg?style=svg)](https://circleci.com/gh/erickrawczyk/resume/tree/main)
 
 **Global Dependencies**
 
@@ -18,5 +18,5 @@ This repo generates my personal Resume. It builds the React and Tailwind app wit
 **Commands**
 
 - `npm i` - install package dependencies
-- `npm run dev` - starts a dev server on port 1234
-- `npm run export` - exports a PDF to `/dist/Resume.pdf`. Requires the server running on port 1234
+- `npm run dev` - starts a dev server on port 5173
+- `npm run export` - Builds a static file and exports a JPG and PDF to `/dist/Resume.jpg` and `/dist/Resume.pdf` respectively
