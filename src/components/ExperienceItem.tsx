@@ -25,7 +25,7 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
         ) : null}
         <p className="italic text-xs mb-1">{experience.organization.summary}</p>
         <ul className={clsx('text-xs', !isSingle && 'list-disc pl-4')}>
-          {experience.description?.map((description, index) => (
+          {experience.description?.map((description) => (
             <li key={description} className="mb-1">
               {description}
             </li>

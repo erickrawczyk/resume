@@ -21,8 +21,8 @@ export function Positions({ positions }: PositionsProps) {
 
   return (
     <ul className="mb-1">
-      {sorted.map((position, index) => (
-        <li key={index}>
+      {sorted.map((position) => (
+        <li key={position.title}>
           <div className="flex justify-between align-middle">
             <p className="text-xs">{position.title}</p>
             <hr className="grow mx-4 my-auto" />
