@@ -56,6 +56,16 @@ jobs:
       - run:
           name: "Upload Resume to S3"
           command: aws s3 cp ./dist s3://eric.kraw.cz/img --recursive
+  bust-github-image-cache:
+    working_directory: ~/resume
+    docker:
+      - image: cimg/base:2024.02
+    steps:
+      - run:
+          name: "Bust GitHub Cache"
+          command: |
+            curl -s https://github.com/erickrawczyk/resume/blob/master/README.md > readme.html
+            grep -Eo '<img src=\\"[^"]+\\"' readme.html | grep camo | grep -Eo 'https[^"\\]+' | xargs -I {} curl -w "\n" -s -X PURGE {}
 workflows:
   export-and-release:
     jobs:
@@ -69,6 +79,13 @@ workflows:
       - release-jpg:
           requires:
             - build-and-export
+          filters:
+            branches:
+              only: main
+      - bust-github-image-cache:
+          requires:
+            - release-pdf
+            - release-jpg
           filters:
             branches:
               only: main
