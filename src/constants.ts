@@ -1,10 +1,11 @@
 export const personalInfo: PersonalInfo = {
   name: "Eric Krawczyk",
-  email: "eric.krawczyk@gmail.com",
+  title: "Technologist & Leader",
   location: "Detroit, MI",
-  linkedIn: "https://www.linkedin.com/in/eric-krawczyk",
-  github: "https://www.github.com/erickrawczyk",
-  website: "https://eric.kraw.cz"
+  email: { label: "etk@duck.com", url: "mailto:etk@duck.com" },
+  linkedIn: { label: "eric-krawczyk", url: "https://www.linkedin.com/in/eric-krawczyk" },
+  github: { label: "erickrawczyk", url: "https://www.github.com/erickrawczyk/resume" },
+  website: { label: "eric.kraw.cz", url: "https://eric.kraw.cz" },
 }
 
 export const skillCategories: SkillCategory[] = [

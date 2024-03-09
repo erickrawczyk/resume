@@ -1,10 +1,16 @@
+type SocialMedia = {
+  label: string;
+  url: string;
+}
+
 type PersonalInfo = {
   name: string;
-  email: string;
+  title: string;
   location: string;
-  linkedIn: string;
-  github: string;
-  website: string;
+  email: SocialMedia;
+  linkedIn: SocialMedia;
+  github: SocialMedia;
+  website: SocialMedia;
 }
 
 type SkillCategory = {
