@@ -1,15 +1,14 @@
-const puppeteer = require('puppeteer');
-const fs = require('fs').promises;
+import puppeteer from 'puppeteer';
+import fs from 'fs/promises';
 
 const exportStaticResume = async () => {
   try {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto(`http://localhost:1234/`, {
-      waitUntil: 'networkidle0',
-    });
+    const html = await fs.readFile('./dist/index.html', 'utf8');
+    await page.setContent(html, { waitUntil: 'networkidle0' });
+    await page.emulateMediaType('screen');
 
-    await page.emulateMedia('screen');
     const pdf = await page.pdf({
       printBackground: true,
       format: 'Letter',
@@ -25,7 +24,7 @@ const exportStaticResume = async () => {
       path: './dist/Resume.jpg',
       fullPage: true,
       type: 'jpeg',
-      quality: 99,
+      quality: 90,
     });
 
     await browser.close();

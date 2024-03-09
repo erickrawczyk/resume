@@ -1,28 +1,39 @@
 {
-  "name": "resume",
-  "version": "1.0.0",
-  "description": "Eric Krawczyk Personal Resume",
-  "main": "index.js",
-  "author": "Eric Krawczyk",
-  "license": "UNLICENSED",
+  "name": "resume-overhaul",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "parcel src/index.html",
-    "export": "node export.js"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "export": "npm run build && node export.js"
   },
   "dependencies": {
-    "components": "^0.1.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "styled-components": "^4.4.0",
-    "styled-icons": "^8.4.2"
+    "@heroicons/react": "^2.1.1",
+    "clsx": "^2.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "parcel-bundler": "1.12.4",
-    "prettier": "^1.18.2",
-    "puppeteer": "^1.20.0"
+    "@types/node": "^20.11.25",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.18",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.35",
+    "puppeteer": "^22.4.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "unplugin-fonts": "^1.1.1",
+    "vite": "^5.1.4",
+    "vite-plugin-singlefile": "^2.0.1",
+    "vite-tsconfig-paths": "^4.3.1"
   }
 }

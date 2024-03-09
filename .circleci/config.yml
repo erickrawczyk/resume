@@ -1,104 +1,74 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-version: 2
+version: 2.1
 jobs:
-  build:
-    docker:
-      - image: circleci/node:10
-
+  build-and-export:
     working_directory: ~/resume
-
+    docker:
+      - image: cimg/node:21.6.2-browsers
     steps:
       - checkout
-
       - run:
-          name: Install Headless Chrome dependencies
-          command: |
-            sudo apt-get install -yq \
-            gconf-service libasound2 libatk1.0-0 libatk-bridge2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
-            libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
-            libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 \
-            libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates \
-            fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
-
-      # Download and cache dependencies
+          name: Update NPM
+          command: "sudo npm install -g npm"
       - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-
-      - run: yarn install
-
+          key: dependency-cache-{{ checksum "package-lock.json" }}-v3
+      - run:
+          name: Install Dependencies
+          command: npm install
       - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}-v3
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      # get server up and running in the background
+            - ./node_modules
+            - ~/.cache
       - run:
-          command: yarn start
-          background: true
-      # wait for the server to start responding. We expect Bad Request 400 once it starts listening.
-      # https://discuss.circleci.com/t/run-http-server-in-background-during-tests/3177/8
-      - run:
-          shell: /bin/sh
-          command: |
-            wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 10 http://localhost:1234
-            :
-      - run:
-          command: yarn export
-
+          name: Build & Export
+          command: npm run export
       - store_artifacts:
           path: dist/Resume.pdf
           destination: Resume.pdf
-
       - store_artifacts:
           path: dist/Resume.jpg
           destination: Resume.jpg
-
       - persist_to_workspace:
           root: dist
           paths:
             - Resume.pdf
             - Resume.jpg
-  release_pdf:
-    requires:
-      - build
-    docker:
-      - image: circleci/golang:1.13
+  release-pdf:
     working_directory: ~/resume
+    docker:
+      - image: cimg/go:1.22.1
     steps:
       - attach_workspace:
           at: dist
       - run:
-          name: 'Publish Release on GitHub'
+          name: "Publish Release on GitHub"
           command: |
-            go get github.com/tcnksm/ghr
+            go install github.com/tcnksm/ghr@latest
             VERSION=latest
             ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ./dist
-  release_jpg:
-    requires:
-      - build
-    docker:
-      - image: circleci/python:3.6.2
+  release-jpg:
     working_directory: ~/resume
+    docker:
+      - image: cimg/aws:2024.03
     steps:
       - attach_workspace:
           at: dist
-      - run: sudo pip install awscli
       - run:
-          name: 'Upload Resume to S3'
+          name: "Upload Resume to S3"
           command: aws s3 cp ./dist s3://eric.kraw.cz/img --recursive
-
 workflows:
-  version: 2
-  build_and_release:
+  export-and-release:
     jobs:
-      - build
-      - release_pdf:
+      - build-and-export
+      - release-pdf:
           requires:
-            - build
-      - release_jpg:
+            - build-and-export
+          filters:
+            branches:
+              only: main
+      - release-jpg:
           requires:
-            - build
+            - build-and-export
+          filters:
+            branches:
+              only: main
