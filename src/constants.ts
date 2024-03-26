@@ -2,10 +2,10 @@ export const personalInfo: PersonalInfo = {
   name: "Eric Krawczyk",
   title: "Software Product Engineer",
   location: "Detroit, MI",
-  email: { label: "eric.krawczyk@gmail.com", url: "mailto:eric.krawczyk@gmail.com" },
-  linkedIn: { label: "eric-krawczyk", url: "https://www.linkedin.com/in/eric-krawczyk" },
-  github: { label: "erickrawczyk", url: "https://www.github.com/erickrawczyk/resume" },
-  website: { label: "eric.kraw.cz", url: "https://eric.kraw.cz" },
+  email: { label: "eric.krawczyk@gmail.com", url: "https://link.kraw.cz/email" },
+  linkedIn: { label: "eric-krawczyk", url: "https://link.kraw.cz/linkedin" },
+  github: { label: "erickrawczyk", url: "https://link.kraw.cz/resume" },
+  website: { label: "eric.kraw.cz", url: "https://link.kraw.cz/homepage" },
 }
 
 export const professionalExperiences: Experience[] = [
