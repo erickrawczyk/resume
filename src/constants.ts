@@ -12,7 +12,7 @@ export const professionalExperiences: Experience[] = [
   {
     organization: {
       name: "Paladin, PBC",
-      website: "https://www.joinpaladin.com",
+      website: "https://link.kraw.cz/paladin",
       location: "Chicago, IL (Remote)",
       summary: "Increasing access to justice by helping legal teams run more efficient pro bono programs.",
     },
@@ -41,7 +41,7 @@ export const professionalExperiences: Experience[] = [
   {
     organization: {
       name: "SkySpecs",
-      website: "https://www.skyspecs.com",
+      website: "https://link.kraw.cz/skyspecs",
       location: "Ann Arbor, MI (Remote)",
       summary: "Data & Robotics startup that helps wind farm owners monitor the health of their turbine fleets.",
     },
@@ -64,7 +64,7 @@ export const professionalExperiences: Experience[] = [
   {
     organization: {
       name: "Deepfield (Acquired by Nokia)",
-      website: "https://www.nokia.com/networks/ip-networks/deepfield",
+      website: "https://link.kraw.cz/deepfield",
       location: "Ann Arbor, MI",
       summary: "Realtime big data analytics and security products for peta-scale networks",
     },
@@ -82,7 +82,7 @@ export const professionalExperiences: Experience[] = [
   {
     organization: {
       name: "DocNetwork",
-      website: "https://www.docnetwork.org",
+      website: "https://link.kraw.cz/docnetwork",
       location: "Ann Arbor, MI",
       summary: "Health software suite to manage patient records at schools and camps.",
     },
@@ -108,7 +108,7 @@ export const extracurricularExperiences: Experience[] = [
   {
     organization: {
       name: "313 Care Collective",
-      website: "https://313cc.org",
+      website: "https://link.kraw.cz/313cc",
       location: "Detroit, MI",
       summary: "Community health organization providing first aid, training, supplies, and logistical support for local political action.",
     },
@@ -127,7 +127,7 @@ export const extracurricularExperiences: Experience[] = [
   {
     organization: {
       name: "Syncytium Arts",
-      website: "https://syncytium.org/",
+      website: "https://link.kraw.cz/syncytium",
       location: "Ann Arbor/Detroit, MI",
       summary: "Artist incubator and collective that empowers creators and builds immersive installations for ephemeral events.",
     },
@@ -148,7 +148,7 @@ export const education: Experience = {
   organization: {
     name: "University of Michigan",
     location: "Ann Arbor, MI",
-    website: "https://www.umich.edu",
+    website: "https://link.kraw.cz/umich",
   },
   positions: [
     {
