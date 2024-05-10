@@ -71,8 +71,8 @@ export const professionalExperiences: Experience[] = [
     positions: [
       {
         title: "Software Engineer (Frontend)",
-        startDate: "2020-07",
-        endDate: "2021-01",
+        startDate: "2017-11",
+        endDate: "2018-12",
       }
     ],
     description: [
