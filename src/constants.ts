@@ -53,7 +53,7 @@ export const professionalExperiences: Experience[] = [
       },
       {
         title: "Software Engineer (Applications & DevOps)",
-        startDate: "2019",
+        startDate: "2019-01",
         endDate: "2020-07",
       },
     ],
