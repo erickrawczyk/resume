@@ -66,13 +66,11 @@ jobs:
           command: |
             echo "Downloading README.md from GitHub..."
             curl -s https://github.com/erickrawczyk/resume/blob/master/README.md > readme.html
-            cat readme.html
             echo "Extracting image URLs from README.md..."
             grep -o '<img src="https://camo.githubusercontent.com[^"]*' readme.html | sed -E 's/<img src="([^"]+).*/\1/' > urls.txt
             cat urls.txt
             echo "Purging image cache..."
             xargs -I {} curl -w "\n" -s -X PURGE {} < urls.txt
-            exit 0
 workflows:
   export-and-release:
     jobs:
@@ -89,10 +87,10 @@ workflows:
           filters:
             branches:
               only: main
-      - bust-github-image-cache
-        # requires:
-        #   - release-pdf
-        #   - release-jpg
-        # filters:
-        # branches:
-        # only: main
+      - bust-github-image-cache:
+          requires:
+            - release-pdf
+            - release-jpg
+          filters:
+            branches:
+              only: main
