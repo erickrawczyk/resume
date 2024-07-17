@@ -64,12 +64,13 @@ jobs:
       - run:
           name: "Bust GitHub Cache"
           command: |
-            which curl
-            which grep
-            which xargs
+            echo "Downloading README.md from GitHub..."
             curl -s https://github.com/erickrawczyk/resume/blob/master/README.md > readme.html
-            ls -al
-            grep -Eo '<img src=\\"[^"]+\\"' readme.html | grep camo | grep -Eo 'https[^"\\]+' | xargs -I {} curl -w "\n" -s -X PURGE {}
+            echo "Extracting image URLs from README.md..."
+            grep -Eo '<img src=\\"[^"]+\\"' readme.html | grep camo | grep -Eo 'https[^"\\]+' > urls.txt
+            cat urls.txt
+            echo "Purging image cache..."
+            xargs -I {} curl -w "\n" -s -X PURGE {} < urls.txt
             exit 0
 workflows:
   export-and-release:
