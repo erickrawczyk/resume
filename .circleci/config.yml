@@ -64,7 +64,6 @@ jobs:
       - run:
           name: "Bust GitHub Cache"
           command: |
-            print "Busting GitHub Image Cache"
             which curl
             which grep
             which xargs
@@ -87,10 +86,10 @@ workflows:
           filters:
             branches:
               only: main
-      - bust-github-image-cache:
-          requires:
-            - release-pdf
-            - release-jpg
-          # filters:
-          # branches:
-          # only: main
+      - bust-github-image-cache
+        # requires:
+        #   - release-pdf
+        #   - release-jpg
+        # filters:
+        # branches:
+        # only: main
