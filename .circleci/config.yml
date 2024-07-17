@@ -64,6 +64,10 @@ jobs:
       - run:
           name: "Bust GitHub Cache"
           command: |
+            print "Busting GitHub Image Cache"
+            which curl
+            which grep
+            which xargs
             curl -s https://github.com/erickrawczyk/resume/blob/master/README.md > readme.html
             grep -Eo '<img src=\\"[^"]+\\"' readme.html | grep camo | grep -Eo 'https[^"\\]+' | xargs -I {} curl -w "\n" -s -X PURGE {}
             exit 0
@@ -87,6 +91,6 @@ workflows:
           requires:
             - release-pdf
             - release-jpg
-          filters:
-            branches:
-              only: main
+          # filters:
+          # branches:
+          # only: main
