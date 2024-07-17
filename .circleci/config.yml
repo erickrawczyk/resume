@@ -66,6 +66,7 @@ jobs:
           command: |
             echo "Downloading README.md from GitHub..."
             curl -s https://github.com/erickrawczyk/resume/blob/master/README.md > readme.html
+            cat readme.html
             echo "Extracting image URLs from README.md..."
             grep -o '<img src="https://camo.githubusercontent.com[^"]*' readme.html | sed -E 's/<img src="([^"]+).*/\1/' > urls.txt
             cat urls.txt
