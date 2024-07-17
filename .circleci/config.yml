@@ -68,6 +68,7 @@ jobs:
             which grep
             which xargs
             curl -s https://github.com/erickrawczyk/resume/blob/master/README.md > readme.html
+            ls -al
             grep -Eo '<img src=\\"[^"]+\\"' readme.html | grep camo | grep -Eo 'https[^"\\]+' | xargs -I {} curl -w "\n" -s -X PURGE {}
             exit 0
 workflows:
