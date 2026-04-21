@@ -18,9 +18,8 @@ export const professionalExperiences: Experience[] = [
     },
     positions: [
       {
-        title: "Senior Software Engineer",
-        startDate: "2021-02",
-        endDate: "2022-08",
+        title: "VP, Engineering",
+        startDate: "2024-02",
       },
       {
         title: "Lead Product Engineer",
@@ -28,14 +27,15 @@ export const professionalExperiences: Experience[] = [
         endDate: "2024-02",
       },
       {
-        title: "VP, Engineering",
-        startDate: "2024-02",
-      }
+        title: "Senior Software Engineer",
+        startDate: "2021-02",
+        endDate: "2022-08",
+      },
     ],
     description: [
-      "Empower team members through mentorship, fostering a culture of collaboration, managing project lifecycles, and enhancing internal support and deployment processes.",
-      "Directed the development and launch of a new data intelligence product from a competitor's acquisition, leading cross-functional teams to integrate the acquisition smoothly into our product line.",
-      "Rebuilt the Django python frontend in React, significantly improving UX and maintainability while improving relevance and speed of pro bono opportunity results, resulting in 10x faster search and a 20% increase in lawyer interest in pro bono opportunities.",
+      "Own engineering roadmap, team structure, and cross-functional delivery across a 7-person eng org. Set technical direction while staying hands-on across the full stack.",
+      "Directed development and launch of a data intelligence product following a competitor acquisition, leading cross-functional integration across product, engineering, and client success.",
+      "Rebuilt the Django frontend in React, delivering 10x faster search and a 20% increase in lawyer engagement with pro bono opportunities.",
     ]
   },
   {
@@ -43,7 +43,7 @@ export const professionalExperiences: Experience[] = [
       name: "SkySpecs",
       website: "https://link.kraw.cz/skyspecs",
       location: "Ann Arbor, MI (Remote)",
-      summary: "Data & Robotics startup that helps wind farm owners monitor the health of their turbine fleets.",
+      summary: "Data & robotics startup helping wind farm owners monitor turbine fleet health.",
     },
     positions: [
       {
@@ -52,13 +52,13 @@ export const professionalExperiences: Experience[] = [
         endDate: "2021-01",
       },
       {
-        title: "Software Engineer (Applications & DevOps)",
+        title: "Software Engineer, Applications & DevOps",
         startDate: "2019-01",
         endDate: "2020-07",
       },
     ],
     description: [
-      "Microservices and applications developer building turbine fleet management, authorization, user management, and reporting services, as well as automating the CI/CD pipeline for deploying stateless infrastructure using GitLabCI and Hashicorp Terraform.",
+      "Shipped fleet management, authorization, and reporting services for wind turbine operators. Introduced infrastructure-as-code practices using Terraform and GitLabCI, enabling stateless deployments and eliminating manual release overhead.",
     ]
   },
   {
@@ -66,17 +66,17 @@ export const professionalExperiences: Experience[] = [
       name: "Deepfield (Acquired by Nokia)",
       website: "https://link.kraw.cz/deepfield",
       location: "Ann Arbor, MI",
-      summary: "Realtime big data analytics and security products for peta-scale networks",
+      summary: "Realtime big data analytics and security products for peta-scale networks.",
     },
     positions: [
       {
-        title: "Software Engineer (Frontend)",
+        title: "Software Engineer, Frontend",
         startDate: "2017-11",
         endDate: "2018-12",
       }
     ],
     description: [
-      "Led the integration of React and Material UI into a legacy view framework, allowing customers to configure realtime analytics dashboards.",
+      "Led React and Material UI integration into a legacy view framework, enabling customers to configure realtime analytics dashboards for the first time – a capability that had previously required engineering involvement for every change.",
     ]
   },
   {
@@ -84,22 +84,22 @@ export const professionalExperiences: Experience[] = [
       name: "DocNetwork",
       website: "https://link.kraw.cz/docnetwork",
       location: "Ann Arbor, MI",
-      summary: "Health software suite to manage patient records at schools and camps.",
+      summary: "Health software suite managing patient records at schools and camps.",
     },
     positions: [
-      {
-        title: "Software Developer",
-        startDate: "2014-12",
-        endDate: "2016-11",
-      },
       {
         title: "Head of Engineering",
         startDate: "2016-11",
         endDate: "2017-11",
       },
+      {
+        title: "Software Developer",
+        startDate: "2014-12",
+        endDate: "2016-11",
+      },
     ],
     description: [
-      "Early employee leading a team of 6 engineers to scale the company's EHR to support hundreds of schools and camps.",
+      "Joined as the third engineer and grew into leading a team of 6, scaling the EHR platform from early pilot to hundreds of schools and camps nationwide – owning product engineering, architecture, and hiring as the company expanded.",
     ]
   },
 ]
@@ -110,7 +110,7 @@ export const extracurricularExperiences: Experience[] = [
       name: "313 Care Collective",
       website: "https://link.kraw.cz/313cc",
       location: "Detroit, MI",
-      summary: "Community health organization providing first aid, training, supplies, and logistical support for local political action.",
+      summary: "Community health org providing first aid, training, and logistical support for local political action.",
     },
     positions: [
       {
@@ -129,7 +129,7 @@ export const extracurricularExperiences: Experience[] = [
       name: "Syncytium Arts",
       website: "https://link.kraw.cz/syncytium",
       location: "Ann Arbor/Detroit, MI",
-      summary: "Artist incubator and collective that empowers creators and builds immersive installations for ephemeral events.",
+      summary: "Artist incubator and collective building immersive installations for ephemeral events.",
     },
     positions: [
       {
@@ -144,6 +144,21 @@ export const extracurricularExperiences: Experience[] = [
   },
 ]
 
+export const skills = [
+  {
+    category: "Languages & Frameworks",
+    items: ["Python (Django, Flask)", "TypeScript/JavaScript", "React", "Node.js", "Next.js"],
+  },
+  {
+    category: "Infrastructure & DevOps",
+    items: ["Docker", "Kubernetes", "Terraform", "CI/CD", "AWS"],
+  },
+  {
+    category: "Data & Tooling",
+    items: ["PostgreSQL", "GraphQL", "dbt", "Datadog"],
+  },
+]
+
 export const education: Experience = {
   organization: {
     name: "University of Michigan",
@@ -152,7 +167,7 @@ export const education: Experience = {
   },
   positions: [
     {
-      title: "Computer Science, Pursued",
+      title: "Computer Science",
       startDate: "2011-09",
       endDate: "2015-05",
     }
